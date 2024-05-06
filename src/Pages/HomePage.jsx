@@ -11,7 +11,7 @@ const HomePage = () => {
  const [city, setCity]=useState(InfoData.find(item=> item.city==="New York"));
  
 
-  const load = async (name) => {
+  const load = async (name, key) => {
     const response = await fetch(
       API_URL_W +
         new URLSearchParams({
@@ -25,7 +25,7 @@ const HomePage = () => {
     setCityTemp(data.main.temp);
   };
   useEffect(()=>{
-   load(city);
+   load(city, process.env.REACT_APP_WEATHER_API_KEY);
   },[city]);
 
 
