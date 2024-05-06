@@ -17,7 +17,7 @@ const HomePage = () => {
         new URLSearchParams({
           lon: name.longitude,
           lat: name.latitude,
-          appid: '56a7c71b23b3e9121b49dade5e8fa4c7',
+          appid: key,
           units:'Metric'
         })
     );
